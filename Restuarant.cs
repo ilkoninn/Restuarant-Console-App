@@ -22,7 +22,7 @@ namespace RestaurantsConsoleApp
 
         public void AddFoodMenu(Food food)
         {
-            if(food.Name.Length > 2 && food.Price >= 0 && food.PreparationTime > 0)
+            if(food.Name.Length > 2 && food.Price >= 0 && food.PreparationTime >= 0)
             {
                 Array.Resize(ref foods, foods.Length + 1);
                 foods[foods.Length - 1] = food;
@@ -37,7 +37,7 @@ namespace RestaurantsConsoleApp
         public void AddDrinkMenu(Drink drink)
         {
             if (drink.Name.Length > 2 && drink.Price >= 0 && 
-                drink.AlcoholPercentage > 0 && drink.DeliveryTime > 0)
+                drink.AlcoholPercentage >= 0 && drink.DeliveryTime >= 0)
             {
                 Array.Resize(ref drinks, drinks.Length + 1);
                 drinks[drinks.Length - 1] = drink;
@@ -54,7 +54,7 @@ namespace RestaurantsConsoleApp
             if (service.ServiceType.Length > 2 && service.Price >= 0)
             {
                 Array.Resize(ref services, services.Length + 1);
-                services[drinks.Length - 1] = service;
+                services[services.Length - 1] = service;
 
                 Console.WriteLine("\nNew service added to menu!");
             }

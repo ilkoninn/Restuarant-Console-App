@@ -129,7 +129,7 @@
             string foodName = Console.ReadLine();
             Console.Write("Food price: ");
             double foodAmount = double.Parse(Console.ReadLine());
-            Console.Write("Food preparation time: ");
+            Console.Write("Food preparation time(minute): ");
             double foodPreparationTime = double.Parse(Console.ReadLine());
 
             Food food = new Food(foodName, foodAmount, foodPreparationTime);
@@ -143,7 +143,7 @@
             string drinkName = Console.ReadLine();
             Console.Write("Drink price: ");
             double drinkPrice = double.Parse(Console.ReadLine());
-            Console.Write("Drink delivery time: ");
+            Console.Write("Drink delivery time(minute): ");
             double drinkDeliveryTime = double.Parse(Console.ReadLine());
             Console.Write("Drink alcohol percentage: ");
             double drinkAlcoholPercentage = double.Parse(Console.ReadLine());
@@ -382,7 +382,7 @@
             Console.Write("Foods delivery time(minutes): ");
             double deliveryTime = double.Parse(Console.ReadLine());
 
-            if (deliveryTime > 0)
+            if (deliveryTime >= 0)
             {
                 Console.WriteLine();
                 foreach (var item in restuarant.GetAllFood())
@@ -408,7 +408,7 @@
             Console.Write("Drinks delivery time(minutes): ");
             double deliveryTime = double.Parse(Console.ReadLine());
 
-            if (deliveryTime > 0)
+            if (deliveryTime >= 0)
             {
                 Console.WriteLine();
                 foreach (var item in restuarant.GetAllDrink())
